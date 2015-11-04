@@ -12,7 +12,7 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class CollaseToolbarActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private CollapsingToolbarLayout collapsingToolbarLayout;
     @Override
