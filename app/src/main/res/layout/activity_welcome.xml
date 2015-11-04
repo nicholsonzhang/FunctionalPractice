@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <com.function.collection.widget.viewpageindicator.IconPageIndicator
+    <com.functionalpractice.viewpageindicator.IconPageIndicator
         android:id="@+id/indicator"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
