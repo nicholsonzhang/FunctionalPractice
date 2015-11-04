@@ -24,6 +24,9 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".FuncListActivity" />
+        <activity
+            android:name=".ToolbarActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

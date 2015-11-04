@@ -14,19 +14,16 @@ import com.functionalpractice.adapter.RecyclerAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CollaseToolbarActivity extends AppCompatActivity {
+public class ToolbarActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private CollapsingToolbarLayout collapsingToolbarLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.collase_toolbar_layout);
+        setContentView(R.layout.toolbar_layout);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        toolbar.setTitle("Title");
         setSupportActionBar(toolbar);
-
-        collapsingToolbarLayout = (CollapsingToolbarLayout)findViewById(R.id.collaps_toolbar);
-        collapsingToolbarLayout.setTitle("Title");
-
         recyclerView = (RecyclerView)findViewById(R.id.recycler_view);
 
         LinearLayoutManager linearLayoutManager  = new LinearLayoutManager(this);

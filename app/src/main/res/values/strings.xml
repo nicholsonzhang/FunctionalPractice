@@ -3,4 +3,5 @@
     <string name="action_settings">Settings</string>
 
     <string name="collase_toolbar_activity">可伸缩Toolbar</string>
+    <string name="toolbar_activity">Toolbar</string>
 </resources>

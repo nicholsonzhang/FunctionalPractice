@@ -9,8 +9,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -25,7 +23,8 @@ public class FuncListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.func_list_layout);
         mListView = (ListView)findViewById(R.id.func_list_view);
-        mSamples = new Sample[]{new Sample(R.string.collase_toolbar_activity,CollaseToolbarActivity.class)};
+        mSamples = new Sample[]{new Sample(R.string.collase_toolbar_activity,CollaseToolbarActivity.class),
+        new Sample(R.string.toolbar_activity,ToolbarActivity.class)};
         mListView.setAdapter(new ArrayAdapter<Sample>(this,android.R.layout.simple_list_item_1,android.R.id.text1,mSamples));
 
 
