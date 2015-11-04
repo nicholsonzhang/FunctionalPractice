@@ -22,6 +22,8 @@
         <activity
             android:name=".CollaseToolbarActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".FuncListActivity" />
     </application>
 
 </manifest>
