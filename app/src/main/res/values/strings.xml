@@ -4,4 +4,5 @@
 
     <string name="collase_toolbar_activity">可伸缩Toolbar</string>
     <string name="toolbar_activity">Toolbar</string>
+    <string name="volley_activity">Volley</string>
 </resources>
