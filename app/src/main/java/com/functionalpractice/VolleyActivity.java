@@ -11,12 +11,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
-
 
 /**
  * Created by nichol on 15/11/5.
@@ -30,7 +27,7 @@ public class VolleyActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.volley_activity_layout);
         textView1 = (TextView)findViewById(R.id.text1);
-        requestQueue = Volley.newRequestQueue(this);
+        requestQueue = VolleyUtils.getInstance(this).getRequestQueue();
 
 //        testStringRequestGet();
 //        testJsonObjectRequest();
@@ -95,10 +92,6 @@ public class VolleyActivity extends AppCompatActivity{
         requestQueue.add(jsonArrayRequest);
 
     }
-    @Override
-    protected void onStop() {
-        super.onStop();
 
-    }
 
 }
