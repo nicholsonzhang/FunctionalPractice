@@ -28,6 +28,7 @@ dependencies {
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
     compile files('libs/volley.jar')
+    compile 'com.alibaba:fastjson:1.2.7'
 }
 
 apt {
