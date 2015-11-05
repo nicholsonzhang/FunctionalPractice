@@ -27,6 +27,7 @@ dependencies {
     compile 'com.android.support:design:23.1.0'
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
+    compile files('libs/volley.jar')
 }
 
 apt {
