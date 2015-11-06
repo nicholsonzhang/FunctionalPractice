@@ -1,13 +1,16 @@
 package com.functionalpractice;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
@@ -21,18 +24,20 @@ import org.json.JSONObject;
 public class VolleyActivity extends AppCompatActivity{
     public String STRINGTAG = "stringRequestTag";
     private TextView textView1 ;
+    private ImageView imageView1;
     private RequestQueue requestQueue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.volley_activity_layout);
         textView1 = (TextView)findViewById(R.id.text1);
+        imageView1 = (ImageView)findViewById(R.id.image1);
         requestQueue = VolleyUtils.getInstance(this).getRequestQueue();
 
 //        testStringRequestGet();
 //        testJsonObjectRequest();
-        testJsonArrayRequest();
-
+//        testJsonArrayRequest();
+          testImageRequest();
     }
 
 
@@ -90,6 +95,27 @@ public class VolleyActivity extends AppCompatActivity{
             }
         });
         requestQueue.add(jsonArrayRequest);
+
+    }
+
+    private void testImageRequest(){
+        String url = "http://i.imgur.com/7spzG.png";
+        ImageRequest imageRequest = new ImageRequest(url, new Response.Listener<Bitmap>() {
+            @Override
+            public void onResponse(Bitmap bitmap) {
+                textView1.setText(bitmap.getHeight()+"  "+bitmap.getWidth()+"   "+bitmap.getDensity());
+                imageView1.setImageBitmap(bitmap);
+
+            }
+        }, 200, 200, null, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+                imageView1.setBackgroundResource(R.mipmap.ic_launcher);
+
+            }
+        });
+
+        requestQueue.add(imageRequest);
 
     }
 
