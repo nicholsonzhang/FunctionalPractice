@@ -29,6 +29,7 @@ public class VolleyUtils {
     public RequestQueue getRequestQueue(){
 
         if (mRequestQueue == null){
+            // use Application's Context
             mRequestQueue = Volley.newRequestQueue(mContext.getApplicationContext());
         }
         return mRequestQueue;
