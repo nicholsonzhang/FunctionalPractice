@@ -3,6 +3,7 @@ package com.functionalpractice;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,6 +15,9 @@ import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
+import com.functionalpractice.bean.User;
+import com.functionalpractice.bean.Weather;
+import com.functionalpractice.bean.WeatherInfo;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -37,7 +41,8 @@ public class VolleyActivity extends AppCompatActivity{
 //        testStringRequestGet();
 //        testJsonObjectRequest();
 //        testJsonArrayRequest();
-          testImageRequest();
+//          testImageRequest();
+        testFastJsonRequest();
     }
 
 
@@ -116,6 +121,28 @@ public class VolleyActivity extends AppCompatActivity{
         });
         requestQueue.add(imageRequest);
 
+    }
+
+
+
+    private void testFastJsonRequest(){
+        String url = "http://www.weather.com.cn/adat/sk/101010100.html";
+        FastJsonRequest<Weather> request = new FastJsonRequest<Weather>(url, Weather.class, new Response.Listener<Weather>() {
+            @Override
+            public void onResponse(Weather weather) {
+                WeatherInfo info = weather.getWeatherinfo();
+                textView1.setText(info.getCity()+info.getTemp()+info.getTime());
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+                textView1.setText(volleyError.getMessage());
+
+            }
+        });
+
+        requestQueue.add(request);
     }
 
 
