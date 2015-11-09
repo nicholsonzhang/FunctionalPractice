@@ -10,7 +10,7 @@ import com.android.volley.toolbox.Volley;
  */
 public class VolleyUtils {
     private RequestQueue mRequestQueue;
-    private static VolleyUtils mInstance;
+    private volatile static VolleyUtils mInstance;
     private Context mContext;
 
     private VolleyUtils(Context context){
@@ -21,7 +21,11 @@ public class VolleyUtils {
 
     public static synchronized VolleyUtils getInstance(Context context){
         if (mInstance == null){
-            mInstance = new VolleyUtils(context);
+            synchronized (VolleyUtils.class){
+                if (mInstance == null){
+                    mInstance = new VolleyUtils(context);
+                }
+            }
         }
 
         return mInstance;

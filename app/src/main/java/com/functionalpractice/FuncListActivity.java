@@ -26,7 +26,8 @@ public class FuncListActivity extends AppCompatActivity {
         mSamples = new Sample[]{new Sample(R.string.collase_toolbar_activity,CollaseToolbarActivity.class),
         new Sample(R.string.toolbar_activity,ToolbarActivity.class),
         new Sample(R.string.volley_activity,VolleyActivity.class),
-        new Sample(R.string.json_activity,JsonActivity.class)};
+        new Sample(R.string.json_activity,JsonActivity.class),
+        new Sample(R.string.picture_download_activity,PictureDownloadActivity.class)};
         mListView.setAdapter(new ArrayAdapter<Sample>(this,android.R.layout.simple_list_item_1,android.R.id.text1,mSamples));
 
 
