@@ -28,7 +28,8 @@ public class FuncListActivity extends AppCompatActivity {
         new Sample(R.string.volley_activity,VolleyActivity.class),
         new Sample(R.string.json_activity,JsonActivity.class),
         new Sample(R.string.picture_download_activity,PictureDownloadActivity.class),
-        new Sample(R.string.web_view_activity,WebViewActivity.class)};
+        new Sample(R.string.web_view_activity,WebViewActivity.class),
+        new Sample(R.string.animation_activity,AnimationActivity.class)};
         mListView.setAdapter(new ArrayAdapter<Sample>(this,android.R.layout.simple_list_item_1,android.R.id.text1,mSamples));
 
 

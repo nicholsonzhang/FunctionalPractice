@@ -86,5 +86,6 @@ public class WebViewActivity extends AppCompatActivity {
         webView.loadUrl(url);
 
 
+
     }
 }

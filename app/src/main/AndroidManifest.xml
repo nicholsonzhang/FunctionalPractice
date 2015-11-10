@@ -34,6 +34,7 @@
         <activity android:name=".PictureDownloadActivity"/>
         <activity android:name=".WebViewActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".AnimationActivity"/>
     </application>
 
 </manifest>

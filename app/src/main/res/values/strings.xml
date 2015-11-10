@@ -8,4 +8,5 @@
     <string name="json_activity">JSON</string>
     <string name="picture_download_activity">图片下载</string>
     <string name="web_view_activity">WebView</string>
+    <string name="animation_activity">Animation</string>
 </resources>
