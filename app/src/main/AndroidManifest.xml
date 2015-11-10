@@ -32,6 +32,8 @@
         <activity android:name=".VolleyActivity"/>
         <activity android:name=".JsonActivity"/>
         <activity android:name=".PictureDownloadActivity"/>
+        <activity android:name=".WebViewActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
