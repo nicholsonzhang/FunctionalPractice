@@ -35,6 +35,7 @@
         <activity android:name=".WebViewActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".AnimationActivity"/>
+        <activity android:name=".SelectImageActivity"/>
     </application>
 
 </manifest>

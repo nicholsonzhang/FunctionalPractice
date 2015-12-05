@@ -9,4 +9,5 @@
     <string name="picture_download_activity">图片下载</string>
     <string name="web_view_activity">WebView</string>
     <string name="animation_activity">Animation</string>
+    <string name="select_image_activity">选择图片</string>
 </resources>
