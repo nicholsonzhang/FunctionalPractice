@@ -36,6 +36,7 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".AnimationActivity"/>
         <activity android:name=".SelectImageActivity"/>
+        <activity android:name=".PopuWindowActivity"/>
     </application>
 
 </manifest>
