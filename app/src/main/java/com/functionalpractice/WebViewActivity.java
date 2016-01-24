@@ -11,6 +11,8 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import butterknife.OnClick;
+
 /**
  * Created by nichol on 15/11/10.
  */
@@ -44,8 +46,6 @@ public class WebViewActivity extends AppCompatActivity {
         webSettings.setDefaultTextEncodingName("UTF-8");
         webSettings.setBuiltInZoomControls(true);
         webSettings.setUseWideViewPort(true);
-
-
         webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
         webSettings.setLoadWithOverviewMode(true);
         webSettings.setAppCacheEnabled(true);
@@ -84,8 +84,15 @@ public class WebViewActivity extends AppCompatActivity {
             }
         });
         webView.loadUrl(url);
+    }
 
 
+    @OnClick(R.id.set_data)
+    void setData(){
+
+    }
+    @OnClick(R.id.clear_data)
+    void clearData(){
 
     }
 }

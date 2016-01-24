@@ -31,7 +31,12 @@ public class FuncListActivity extends AppCompatActivity {
         new Sample(R.string.web_view_activity,WebViewActivity.class),
         new Sample(R.string.animation_activity,AnimationActivity.class),
         new Sample(R.string.select_image_activity,SelectImageActivity.class),
-        new Sample(R.string.popuwindow_activity,PopuWindowActivity.class)};
+        new Sample(R.string.popuwindow_activity,PopuWindowActivity.class),
+        new Sample(R.string.list_activity,ListActivity_.class),
+        new Sample(R.string.scroll_list_activity,ScrollListViewActivity_.class),
+        new Sample(R.string.led_activity,LedActivity.class),
+        new Sample(R.string.tab_activity,TabActivity.class),
+        new Sample(R.string.custom_view_activity,CustomViewActivity.class)};
         mListView.setAdapter(new ArrayAdapter<Sample>(this,android.R.layout.simple_list_item_1,android.R.id.text1,mSamples));
 
 

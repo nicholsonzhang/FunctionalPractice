@@ -11,4 +11,10 @@
     <string name="animation_activity">Animation</string>
     <string name="select_image_activity">选择图片</string>
     <string name="popuwindow_activity">Popu Window</string>
+    <string name="list_activity">List</string>
+    <string name="scroll_list_activity">Scroll List</string>
+    <string name="led_activity">LED</string>
+    <string name="tab_activity">Tab</string>
+    <string name="custom_view_activity">Custom View</string>
+    <string name="default_led">88:88:88</string>
 </resources>

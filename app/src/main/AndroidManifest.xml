@@ -11,9 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".WelcomeActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:name=".FuncListActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,8 +23,7 @@
         <activity
             android:name=".CollaseToolbarActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity
-            android:name=".FuncListActivity" />
+
         <activity
             android:name=".ToolbarActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
@@ -37,6 +35,12 @@
         <activity android:name=".AnimationActivity"/>
         <activity android:name=".SelectImageActivity"/>
         <activity android:name=".PopuWindowActivity"/>
+        <activity android:name=".ListActivity_"/>
+        <activity android:name=".ScrollListViewActivity_"/>
+        <activity android:name=".LedActivity"/>
+        <activity android:name=".CustomViewActivity"/>
+        <activity
+            android:name=".TabActivity"/>
     </application>
 
 </manifest>
